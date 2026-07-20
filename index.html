@@ -81,6 +81,12 @@
   .slot h3{font-size:1rem;font-weight:700;margin-bottom:4px}
   .slot p{font-size:.9rem;color:rgba(255,255,255,.8)}
   @media(max-width:560px){.slot{grid-template-columns:1fr;gap:4px}}
+  .tabs{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 30px}
+  .tabbtn{background:transparent;border:2px solid var(--mint);color:var(--mint);font-family:var(--font);font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:12px 28px;border-radius:999px;cursor:pointer;font-size:.9rem;transition:all .15s}
+  .tabbtn:hover{background:rgba(71,215,172,.15)}
+  .tabbtn.active{background:var(--mint);color:var(--blue)}
+  .day{display:none}
+  .day.active{display:block}
 
   /* Register */
   .reg-card{background:var(--card);border:1px solid var(--cardline);border-radius:var(--radius);padding:36px;max-width:660px;margin:36px auto 0}
@@ -167,9 +173,14 @@
 
 <section class="program" id="program">
   <div class="wrap">
-    <span class="tag">Main Stage</span>
-    <h2>Program – 25 September 2026</h2>
-    <p class="lead" style="margin-bottom:28px">Connecting Frankfurt with global opportunities.</p>
+    <span class="tag">Agenda</span>
+    <h2>Program</h2>
+    <p class="lead" style="margin-bottom:22px">Connecting Frankfurt with global opportunities.</p>
+    <div class="tabs">
+      <button class="tabbtn active" data-day="day1" type="button">25 September</button>
+      <button class="tabbtn" data-day="day2" type="button">26 September · Optional</button>
+    </div>
+    <div id="day1" class="day active">
     <div class="slot"><span class="time">09:00 – 09:45</span><div><h3>Registration &amp; Global Networking Coffee</h3><p>Explore the Networking &amp; Opportunity Hub: regional business corners showcasing global markets, service providers supporting international growth, and ecosystem partners connecting companies, talent and investment.</p></div></div>
     <div class="slot"><span class="time">09:45 – 10:00</span><div><h3>Official Opening – Welcome to Frankfurt: Europe's Gateway for Global Business</h3><p>Opening remarks from JCI Frankfurt, the City Councillor for Economic Affairs and the CEO of IHK Frankfurt on Frankfurt's role as a global business hub.</p></div></div>
     <div class="slot"><span class="time">10:00 – 11:00</span><div><h3>Open Dialogue with Politics – "Frankfurt 2031: From Coalition Vision to Global Business Hub"</h3><p>A strategic conversation on Frankfurt's ambition to become Europe's leading destination for international entrepreneurs, skilled professionals, investors, startups and globally connected SMEs.</p></div></div>
@@ -182,12 +193,14 @@
     <div class="slot"><span class="time">15:45 – 16:30</span><div><h3>Cross-Border Business Connections – "From Conversations to Collaboration"</h3><p>Facilitated matchmaking based on the Global Opportunity Profiles from the workshop – guided introductions to partners, investors, advisors, customers and talent instead of random networking.</p></div></div>
     <div class="slot"><span class="time">16:30 – 17:00</span><div><h3>Closing Conversation – "Lead Beyond Borders: Turning Connections into Partnerships"</h3><p>How businesses, entrepreneurs and international communities can transform today's conversations into long-term collaboration.</p></div></div>
     <div class="slot"><span class="time">Evening</span><div><h3>Global Connections Reception &amp; Interactive Workshop, Part 2 – "Matchmaking Beyond the Event"</h3><p>An evening networking experience with curated introductions based on your Opportunity Profile – connecting entrepreneurs, investors, SMEs, startups and ecosystem experts over drinks.</p></div></div>
+    <p style="margin-top:26px;font-size:.9rem;color:var(--gold);font-weight:600;letter-spacing:.03em">Event journey: Understand the global landscape → define your goals → explore markets &amp; partnerships → meet the right people → turn conversations into lasting relationships.</p>
+    </div>
 
-    <h2 style="margin-top:56px">Day 2 – 26 September 2026 <span style="font-size:1rem;font-weight:600;color:var(--mint)">(optional)</span></h2>
+    <div id="day2" class="day">
     <div class="slot"><span class="time">10:00 – 12:30</span><div><h3>Discover Frankfurt City Tour</h3><p>An optional guided tour (approx. 2.5 hours) through Frankfurt's business districts, international communities and cultural landmarks – experience why Frankfurt is one of Europe's leading global cities.</p></div></div>
     <div class="slot"><span class="time">from 13:00</span><div><h3>Frankfurt Networking Brunch</h3><p>Relaxed brunch to continue conversations and deepen the relationships established during the summit.</p></div></div>
-
-    <p style="margin-top:32px;font-size:.9rem;color:var(--gold);font-weight:600;letter-spacing:.03em">Event journey: Understand the global landscape → define your goals → explore markets &amp; partnerships → meet the right people → turn conversations into lasting relationships.</p>
+    <p style="margin-top:26px;font-size:.9rem;color:rgba(255,255,255,.75)">The optional program on 26 September is open to all summit participants – ideal if you are staying the weekend in Frankfurt. See our <a href="hotels.html">hotel recommendations</a>.</p>
+    </div>
   </div>
 </section>
 
@@ -293,5 +306,15 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.tabbtn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tabbtn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.day').forEach(function(d){ d.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.day).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
