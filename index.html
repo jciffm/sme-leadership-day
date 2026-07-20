@@ -28,13 +28,11 @@
   .topbar{padding:22px 0}
   .topbar .wrap{display:flex;align-items:center;gap:12px}
 
-  /* Hero – dotted world map + Frankfurt skyline from the flyer */
-  .hero{padding:40px 0 min(38vw,500px);position:relative;overflow:hidden;
-    background-image:url('hero-globe.webp'),url('hero-skyline.webp');
-    background-repeat:no-repeat,no-repeat;
-    background-position:right -20px top,center bottom;
-    background-size:min(54vw,680px) auto,100% auto}
-  @media(max-width:820px){.hero{background-size:95vw auto,120% auto;background-position:right top,center bottom}}
+  /* Hero – goldene gepunktete Weltkarte aus dem Flyer */
+  .hero{padding:40px 0 80px;position:relative;overflow:hidden;
+    background:url('hero-globe.webp') no-repeat right -20px top;
+    background-size:min(54vw,680px) auto}
+  @media(max-width:820px){.hero{background-size:95vw auto;background-position:right top}}
   .hero .inner{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   @media(max-width:820px){.hero .inner{grid-template-columns:1fr}}
   .titleblock .sme{display:inline-block;background:var(--mint);color:var(--blue);font-weight:900;font-size:clamp(3.2rem,9vw,5.2rem);line-height:1;padding:6px 18px;margin-bottom:10px}
@@ -78,7 +76,7 @@
 
   /* Program */
   .program{background:var(--blue-deep)}
-  .slot{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 22px;background:var(--card);border:1px solid var(--cardline);border-radius:10px;margin-bottom:10px}
+  .slot{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 22px;background:var(--card);border:1px solid var(--cardline);border-radius:10px;margin-bottom:10px}
   .slot .time{font-weight:800;color:var(--mint)}
   .slot h3{font-size:1rem;font-weight:700;margin-bottom:4px}
   .slot p{font-size:.9rem;color:rgba(255,255,255,.8)}
@@ -133,12 +131,6 @@
       <p class="hotellink">Travelling from abroad? See our <a href="hotels.html">hotel recommendations</a> near the venue.</p>
     </div>
     <div class="heroside">
-      <div class="regions">
-        <span class="region">EUROPE</span>
-        <span class="region">ASIA</span>
-        <span class="region">AFRICA</span>
-        <span class="region">INDIA</span>
-      </div>
       <div class="pricebox">
         <div class="lbl">Entry Price</div>
         <div class="val">€35</div>
@@ -177,19 +169,25 @@
   <div class="wrap">
     <span class="tag">Main Stage</span>
     <h2>Program – 25 September 2026</h2>
-    <div class="slot"><span class="time">09:00</span><div><h3>Registration &amp; Global Networking Coffee</h3><p>Explore the Networking &amp; Opportunity Hub with regional business corners and service providers.</p></div></div>
-    <div class="slot"><span class="time">09:45</span><div><h3>Official Opening – Welcome to Frankfurt: Europe's Gateway for Global Business</h3><p>Opening remarks from JCI Frankfurt, the City Councillor for Economic Affairs and the CEO of IHK Frankfurt.</p></div></div>
-    <div class="slot"><span class="time">10:00</span><div><h3>Opening Panel – Opening Doors: Building International Ecosystems</h3><p>Education, economy, politics and civil society on how Frankfurt's international character creates opportunity through diaspora networks and cross-border collaboration.</p></div></div>
-    <div class="slot"><span class="time">11:00</span><div><h3>Keynote – Asia's Next Growth Wave: AI, Innovation and New Business Opportunities</h3><p>Where the next opportunities are emerging and how European SMEs can engage with Asia's evolving economic landscape.</p></div></div>
-    <div class="slot"><span class="time">11:15</span><div><h3>Interactive Workshop – Know What You're Looking For</h3><p>A facilitated framework helping every participant identify what they seek – capital, know-how, partnership or inspiration – and find their match in the room.</p></div></div>
-    <div class="slot"><span class="time">11:45</span><div><h3>Networking Break</h3><p>First round of introductions at the regional networking corners.</p></div></div>
-    <div class="slot"><span class="time">12:15</span><div><h3>Fireside Conversation – The India–Middle East Corridor: A New Engine of Global Growth</h3><p>Why the Europe–India–Middle East corridor has become one of the world's most important growth stories. Audience Q&amp;A included.</p></div></div>
-    <div class="slot"><span class="time">13:00</span><div><h3>Networking Lunch &amp; Opportunity Marketplace</h3><p>Maximise conversations and business introductions with regional experts and ecosystem partners.</p></div></div>
-    <div class="slot"><span class="time">14:30</span><div><h3>Panel – Africa: The Next Global Growth Frontier and the Role of AI</h3><p>Technology ecosystems, outsourcing, startup investment and building long-term Europe–Africa business partnerships.</p></div></div>
-    <div class="slot"><span class="time">15:30</span><div><h3>Global Networking Break</h3><p>Continued engagement in the Networking &amp; Opportunity Hub.</p></div></div>
-    <div class="slot"><span class="time">16:00</span><div><h3>Cross-Border Business Connections – Facilitated Matchmaking</h3><p>Structured networking to identify partners, market-entry opportunities, investors, advisors and talent.</p></div></div>
-    <div class="slot"><span class="time">17:00</span><div><h3>Closing Conversation – Lead Beyond Borders</h3><p>Turning the day's conversations into concrete partnerships and future collaboration.</p></div></div>
-    <div class="slot"><span class="time">17:30</span><div><h3>Global Connections Reception</h3><p>An evening reception with speakers, partners, business leaders and international delegates.</p></div></div>
+    <p class="lead" style="margin-bottom:28px">Connecting Frankfurt with global opportunities.</p>
+    <div class="slot"><span class="time">09:00 – 09:45</span><div><h3>Registration &amp; Global Networking Coffee</h3><p>Explore the Networking &amp; Opportunity Hub: regional business corners showcasing global markets, service providers supporting international growth, and ecosystem partners connecting companies, talent and investment.</p></div></div>
+    <div class="slot"><span class="time">09:45 – 10:00</span><div><h3>Official Opening – Welcome to Frankfurt: Europe's Gateway for Global Business</h3><p>Opening remarks from JCI Frankfurt, the City Councillor for Economic Affairs and the CEO of IHK Frankfurt on Frankfurt's role as a global business hub.</p></div></div>
+    <div class="slot"><span class="time">10:00 – 11:00</span><div><h3>Open Dialogue with Politics – "Frankfurt 2031: From Coalition Vision to Global Business Hub"</h3><p>A strategic conversation on Frankfurt's ambition to become Europe's leading destination for international entrepreneurs, skilled professionals, investors, startups and globally connected SMEs.</p></div></div>
+    <div class="slot"><span class="time">11:00 – 11:15</span><div><h3>Keynote – "From Made in Germany to Made with Asia"</h3><p>Building the next generation of global partnerships: new growth markets, evolving supply chains and innovation collaboration between Europe and Asia.</p></div></div>
+    <div class="slot"><span class="time">11:15 – 12:00</span><div><h3>Interactive Workshop, Part 1 – "Know What You're Looking For: Defining Your Global Opportunity"</h3><p>Develop your personal Global Opportunity Profile: what you're looking for (capital, partnerships, market entry, customers, know-how, talent, inspiration) and what you can offer – so every conversation counts.</p></div></div>
+    <div class="slot"><span class="time">12:00 – 13:30</span><div><h3>Networking Lunch &amp; Opportunity Marketplace</h3><p>Transform conversations into opportunities – connect with regional representatives, trade experts, investors, entrepreneurs and potential collaborators.</p></div></div>
+    <div class="slot"><span class="time">13:30 – 14:30</span><div><h3>Panel Discussion – Africa: "Powering Digital Innovation: Connecting Cameroon and Germany"</h3><p>How Cameroon's emerging technology ecosystem and Germany's innovation economy can collaborate through entrepreneurship, investment and diaspora networks.</p></div></div>
+    <div class="slot"><span class="time">14:30 – 15:00</span><div><h3>Global Networking Break</h3><p>Continue conversations and engage with regional partners at the Networking &amp; Opportunity Hub.</p></div></div>
+    <div class="slot"><span class="time">15:00 – 15:45</span><div><h3>Fireside Conversation – "The India–Middle East Corridor: A New Engine of Global Growth"</h3><p>New trade and investment pathways between Europe, India and the Middle East – and how companies can participate in emerging growth ecosystems. Including audience Q&amp;A.</p></div></div>
+    <div class="slot"><span class="time">15:45 – 16:30</span><div><h3>Cross-Border Business Connections – "From Conversations to Collaboration"</h3><p>Facilitated matchmaking based on the Global Opportunity Profiles from the workshop – guided introductions to partners, investors, advisors, customers and talent instead of random networking.</p></div></div>
+    <div class="slot"><span class="time">16:30 – 17:00</span><div><h3>Closing Conversation – "Lead Beyond Borders: Turning Connections into Partnerships"</h3><p>How businesses, entrepreneurs and international communities can transform today's conversations into long-term collaboration.</p></div></div>
+    <div class="slot"><span class="time">Evening</span><div><h3>Global Connections Reception &amp; Interactive Workshop, Part 2 – "Matchmaking Beyond the Event"</h3><p>An evening networking experience with curated introductions based on your Opportunity Profile – connecting entrepreneurs, investors, SMEs, startups and ecosystem experts over drinks.</p></div></div>
+
+    <h2 style="margin-top:56px">Day 2 – 26 September 2026 <span style="font-size:1rem;font-weight:600;color:var(--mint)">(optional)</span></h2>
+    <div class="slot"><span class="time">10:00 – 12:30</span><div><h3>Discover Frankfurt City Tour</h3><p>An optional guided tour (approx. 2.5 hours) through Frankfurt's business districts, international communities and cultural landmarks – experience why Frankfurt is one of Europe's leading global cities.</p></div></div>
+    <div class="slot"><span class="time">from 13:00</span><div><h3>Frankfurt Networking Brunch</h3><p>Relaxed brunch to continue conversations and deepen the relationships established during the summit.</p></div></div>
+
+    <p style="margin-top:32px;font-size:.9rem;color:var(--gold);font-weight:600;letter-spacing:.03em">Event journey: Understand the global landscape → define your goals → explore markets &amp; partnerships → meet the right people → turn conversations into lasting relationships.</p>
   </div>
 </section>
 
